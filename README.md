@@ -10,5 +10,5 @@ PHP 5
 Memcached
 
 Install:
-sudo aptitude install php5-memcached
-sudo aptitude install memcached
+- sudo aptitude install php5-memcached
+- sudo aptitude install memcached
