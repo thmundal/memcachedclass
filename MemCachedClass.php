@@ -33,7 +33,7 @@ Class MemCachedClass {
     }
     
     public function get($name) {
-        return $this->memcached->get($this->prefix.$name)."\n";        
+        return $this->memcached->get($this->prefix.$name);
     }
 }
 
