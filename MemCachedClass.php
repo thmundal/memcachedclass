@@ -15,7 +15,7 @@ Class MemCachedClass {
     
     public function validate($b, $name) {
         if(sizeof($b) <= 1 OR get_parent_class($b[1]['class']) != get_class())
-            throw new MemCachedClass_exception("Cannot access private member ".$name);        
+            throw new MemCachedClass_exception("Cannot access private member ".$name);
     }
     
     public function __set($name, $value) {
