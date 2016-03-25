@@ -4,12 +4,12 @@ Class MemCachedClass {
     private $memcached = false;
     private $prefix;
     
-    public function __construct() {
+    public function __construct($server = ["ip" => "localhost", "port" => 11211]) {
         if(!class_exists("Memcached"))
             throw new MemCachedClass_exception("Memcached is not installed with php");
         
         $this->memcached = new Memcached();
-        $this->memcached->addServer("localhost", 11211);
+        $this->memcached->addServer($server["ip"], $server["port"]);
         $this->prefix = get_class()."::".get_class($this)."::";
     }
     
